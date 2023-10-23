@@ -45,14 +45,14 @@ export const FormProduct = () => {
 
     const handleRemove = async (id) => {
         console.log(id)
-        // await axios.put('http://localhost:5000/api/product/', device_id)
-        //     .then(res => {
-        //         console.log(res)
-        //         //loadDate()
-        //     })
-        //     .catch((err) => {
-        //         console.log(err)
-        //     })
+        await axios.put('http://localhost:5000/api/product/' + id)
+            .then(res => {
+                console.log(res)
+                //loadDate()
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
     return (
